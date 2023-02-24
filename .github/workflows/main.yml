@@ -49,6 +49,8 @@ jobs:
     needs: check_kernelsu_update
     if: needs.check_kernelsu_update.outputs.kernelsu_release != needs.check_kernelsu_update.outputs.local_release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: install common package
         run: |
