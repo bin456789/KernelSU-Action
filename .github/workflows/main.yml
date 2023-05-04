@@ -120,7 +120,6 @@ jobs:
 
           cd KernelSU
           git checkout ${{ needs.check_kernelsu_update.outputs.kernelsu_release }}
-          git revert -n 7be405e
 
       - name: export flags
         run: |
