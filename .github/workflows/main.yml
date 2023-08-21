@@ -119,8 +119,8 @@ jobs:
           echo 'CONFIG_KPROBES=y' >> arch/arm64/configs/${{ env.defconfig }}
 
           cd KernelSU
-          git checkout main
-          # git checkout ${{ needs.check_kernelsu_update.outputs.kernelsu_release }}
+          # git checkout main
+          git checkout ${{ needs.check_kernelsu_update.outputs.kernelsu_release }}
 
       - name: export flags
         run: |
