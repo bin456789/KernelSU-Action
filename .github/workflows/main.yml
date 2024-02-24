@@ -109,7 +109,7 @@ jobs:
                   continue
               fi
               echo "Applying kernel patch: $line"
-              git apply "this-repo/$line"
+              git apply "this-repo/patches/$line"
           done <<<"$kernel_patch"
 
       - name: Apply KernelSU patch
@@ -119,7 +119,7 @@ jobs:
                   continue
               fi
               echo "Applying KernelSU patch: $line"
-              git apply -p2 --directory KernelSU/kernel "this-repo/$line"
+              git apply -p2 --directory KernelSU/kernel "this-repo/patches/$line"
           done <<<"$kernelsu_patch"
 
       - name: "AOSP-Clang: Restore"

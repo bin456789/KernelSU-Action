@@ -62,7 +62,7 @@ env:
 
 ### kernel_patch 和 kernelsu_patch
 
-分别是应用到 `内核` 和 `KernelSU` 的补丁列表
+分别是应用到 `内核` 和 `KernelSU` 的补丁文件列表，补丁文件需放在 `patches` 文件夹
 
 补丁详细说明: <https://github.com/tiann/KernelSU/discussions/955>
 
