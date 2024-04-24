@@ -8,9 +8,8 @@ env:
   defconfig: |
     dipper_defconfig
   kernel_patch: |
-    support-umount-modules-kernel.patch
+    backport-path-umount.patch
   kernelsu_patch: |
-    support-umount-modules-kernelsu.patch
 
 on:
   schedule:
@@ -225,7 +224,7 @@ jobs:
           path: AnyKernel3-master/*
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.kernelsu_remote_version }}
           body: |
@@ -234,6 +233,9 @@ jobs:
 
             Kernel:
             https://github.com/${{ env.kernel_repository }}/tree/${{ env.kernel_commit_id }}
+
+            Branch:
+            ${{ env.kernel_branch }}
 
             KernelSU:
             https://github.com/tiann/KernelSU/releases/tag/${{ env.kernelsu_remote_version }}

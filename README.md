@@ -31,9 +31,8 @@ env:
   defconfig: |
     dipper_defconfig
   kernel_patch: |
-    support-umount-modules-kernel.patch
+    backport-path-umount.patch
   kernelsu_patch: |
-    support-umount-modules-kernelsu.patch
 ```
 
 ## 参数
@@ -64,6 +63,10 @@ env:
 
 分别是应用到 `内核` 和 `KernelSU` 的补丁文件列表，补丁文件需放在 `patches` 文件夹
 
-补丁详细说明: <https://github.com/tiann/KernelSU/discussions/955>
+补丁详细说明:
+
+<https://github.com/tiann/KernelSU/discussions/955>
+
+<https://kernelsu.org/zh_CN/guide/how-to-integrate-for-non-gki.html#how-to-backport-path-umount>
 
 如果 KernelSU 功能正常，**不要** 添加补丁
