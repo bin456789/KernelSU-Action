@@ -18,14 +18,14 @@
 
 ## 参考配置
 
-本例：小米 8 (dipper) PixelExperience 13
+本例：小米 8 (dipper) PixelExperience 14
 
-<https://github.com/PixelExperience-Devices/kernel_xiaomi_polaris/tree/thirteen>
+<https://github.com/PixelExperience-Devices/kernel_xiaomi_sdm845/tree/fourteen>
 
 ```yaml
 env:
-  kernel_repository: PixelExperience-Devices/kernel_xiaomi_polaris
-  kernel_branch: thirteen
+  kernel_repository: PixelExperience-Devices/kernel_xiaomi_sdm845
+  kernel_branch: fourteen
   device: dipper
   clang_version: r487747c
   defconfig: |
