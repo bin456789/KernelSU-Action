@@ -12,8 +12,6 @@ env:
   kernelsu_patch: |
 
 on:
-  schedule:
-    - cron: "50 9,21 * * *"
   workflow_dispatch:
     inputs:
       allow_rebuild:
@@ -30,7 +28,8 @@ jobs:
         id: check_kernelsu_version
         run: |
           local_version=$(curl -L --header 'authorization: Bearer ${{ github.token }}' https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r .tag_name)
-          remote_version=$(curl -L https://api.github.com/repos/tiann/KernelSU/releases/latest | jq -r .tag_name)
+          # remote_version=$(curl -L https://api.github.com/repos/tiann/KernelSU/releases/latest | jq -r .tag_name)
+          remote_version=v0.9.5
           echo local_version=$local_version | tee -a $GITHUB_OUTPUT
           echo remote_version=$remote_version | tee -a $GITHUB_OUTPUT
     outputs:

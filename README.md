@@ -2,7 +2,9 @@
 
 使用 Github Actions 编译集成 [KernelSU](https://github.com/tiann/KernelSU) 的内核
 
-并定时检测 KernelSU 新版本，有则编译新内核
+~~并定时检测 KernelSU 新版本，有则编译新内核~~
+
+非 GKI 内核的 KernelSU 永远停留在 v0.9.5
 
 ## 使用
 
