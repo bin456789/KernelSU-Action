@@ -73,11 +73,13 @@ jobs:
         with:
           repository: ${{ env.kernel_repository }}
           ref: ${{ env.kernel_branch }}
+          submodules: recursive
 
       - name: Checkout this repo
         uses: actions/checkout@v4
         with:
           path: this-repo
+          submodules: recursive
 
       - name: Get latest kernel commit id
         run: |
